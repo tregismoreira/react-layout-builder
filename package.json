@@ -1,5 +1,5 @@
 {
-  "name": "layout-builder",
+  "name": "react-layout-builder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
