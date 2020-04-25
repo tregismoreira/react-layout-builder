@@ -8,15 +8,12 @@ import styles from './styles.module.scss';
 class RowComponent extends BaseComponent {
   buildSettings = (settings) => {
     const classes = [];
-    const { align, justify } = settings;
 
-    if (align && align !== 'none') {
-      classes.push(align);
-    }
-
-    if (justify && justify !== 'none') {
-      classes.push(justify);
-    }
+    Object.values(settings).forEach((value) => {
+      if (value !== 'none') {
+        classes.push(value);
+      }
+    });
 
     return classes.join(' ');
   };

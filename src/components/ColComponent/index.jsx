@@ -8,23 +8,12 @@ import styles from './styles.module.scss';
 class ColComponent extends BaseComponent {
   buildSettings = (settings) => {
     const classes = [];
-    const { size, align, offset, margin } = settings;
 
-    if (size && size !== 'none') {
-      classes.push(size);
-    }
-
-    if (align && align !== 'none') {
-      classes.push(align);
-    }
-
-    if (offset && offset !== 'none') {
-      classes.push(offset);
-    }
-
-    if (margin && margin !== 'none') {
-      classes.push(margin);
-    }
+    Object.values(settings).forEach((value) => {
+      if (value !== 'none') {
+        classes.push(value);
+      }
+    });
 
     return classes.join(' ');
   };

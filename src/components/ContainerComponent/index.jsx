@@ -7,16 +7,9 @@ import styles from './styles.module.scss';
 
 class ContainerComponent extends BaseComponent {
   buildSettings = (settings) => {
-    const classes = [];
     const { fluid } = settings;
 
-    if (fluid) {
-      classes.push('container-fluid');
-    } else {
-      classes.push('container');
-    }
-
-    return classes.join(' ');
+    return `container${fluid ? '-fluid' : ''}`;
   };
 
   render() {
