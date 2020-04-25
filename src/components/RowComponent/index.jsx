@@ -1,6 +1,8 @@
 import React from 'react';
 import { BaseComponent } from '../';
 
+import './styles.scss';
+
 class RowComponent extends BaseComponent {
   allowedChilds = ['col'];
 
