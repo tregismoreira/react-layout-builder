@@ -6,6 +6,7 @@ import config from './config';
 import styles from './styles.module.scss';
 
 class ContainerComponent extends BaseComponent {
+  // Build the classes according to the component settings.
   buildSettings = (settings) => {
     const { fluid } = settings;
 

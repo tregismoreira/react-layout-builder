@@ -6,6 +6,7 @@ import config from './config';
 import styles from './styles.module.scss';
 
 class RowComponent extends BaseComponent {
+  // Build the classes according to the component settings.
   buildSettings = (settings) => {
     const classes = [];
 
