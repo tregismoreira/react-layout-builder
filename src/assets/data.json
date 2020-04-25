@@ -1,85 +1,98 @@
 [
   {
+    "id": 1,
     "type": "container",
+    "settings": {}
+  },
+  {
+    "id": 2,
+    "type": "row",
+    "parent": 1,
+    "settings": {}
+  },
+  {
+    "id": 3,
+    "type": "row",
+    "parent": 1,
+    "settings": {}
+  },
+  {
+    "id": 4,
+    "type": "row",
+    "parent": 1,
+    "settings": {}
+  },
+  {
+    "id": 5,
+    "type": "row",
+    "parent": 1,
+    "settings": {
+      "justify": "justify-content-center"
+    }
+  },
+  {
+    "id": 6,
+    "type": "row",
+    "parent": 1,
+    "settings": {
+      "justify": "justify-content-end"
+    }
+  },
+  {
+    "id": 7,
+    "parent": 2,
+    "type": "col",
     "settings": {},
-    "children": [
-      {
-        "type": "row",
-        "settings": {},
-        "children": [
-          {
-            "type": "col",
-            "settings": {},
-            "children": []
-          },
-          {
-            "type": "col",
-            "settings": {},
-            "children": []
-          }
-        ]
-      },
-      {
-        "type": "row",
-        "settings": {},
-        "children": [
-          {
-            "type": "col",
-            "settings": {},
-            "children": []
-          },
-          {
-            "type": "col",
-            "settings": {
-              "offset": "offset-4"
-            },
-            "children": []
-          }
-        ]
-      },
-      {
-        "type": "row",
-        "settings": {},
-        "children": [
-          {
-            "type": "col",
-            "settings": {
-              "size": "col-4"
-            },
-            "children": []
-          }
-        ]
-      },
-      {
-        "type": "row",
-        "settings": {
-          "justify": "justify-content-center"
-        },
-        "children": [
-          {
-            "type": "col",
-            "settings": {
-              "size": "col-4"
-            },
-            "children": []
-          }
-        ]
-      },
-      {
-        "type": "row",
-        "settings": {
-          "justify": "justify-content-end"
-        },
-        "children": [
-          {
-            "type": "col",
-            "settings": {
-              "size": "col-4"
-            },
-            "children": []
-          }
-        ]
-      }
-    ]
+    "children": []
+  },
+  {
+    "id": 8,
+    "parent": 2,
+    "type": "col",
+    "settings": {},
+    "children": []
+  },
+  {
+    "id": 9,
+    "parent": 3,
+    "type": "col",
+    "settings": {},
+    "children": []
+  },
+  {
+    "id": 10,
+    "parent": 3,
+    "type": "col",
+    "settings": {
+      "offset": "offset-4"
+    },
+    "children": []
+  },
+  {
+    "ïd": 11,
+    "parent": 4,
+    "type": "col",
+    "settings": {
+      "size": "col-4"
+    },
+    "children": []
+  },
+  {
+    "id": 12,
+    "parent": 5,
+    "type": "col",
+    "settings": {
+      "size": "col-4"
+    },
+    "children": []
+  },
+  {
+    "id": 13,
+    "parent": 6,
+    "type": "col",
+    "settings": {
+      "size": "col-4"
+    },
+    "children": []
   }
 ]
