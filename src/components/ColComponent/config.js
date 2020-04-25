@@ -16,18 +16,18 @@ export default {
       value: 'none',
       options: {
         none: '- None -',
-        1: '1', // .col-1
-        2: '2', // .col-2
-        3: '3', // .col-3
-        4: '4', // .col-4
-        5: '5', // .col-5
-        6: '6', // .col-6
-        7: '7', // .col-7
-        8: '8', // .col-8
-        9: '9', // .col-9
-        10: '10', // .col-10
-        11: '11', // .col-11
-        12: '12', // .col-12
+        'col-1': '1',
+        'col-2': '2',
+        'col-3': '3',
+        'col-4': '4',
+        'col-5': '5',
+        'col-6': '6',
+        'col-7': '7',
+        'col-8': '8',
+        'col-9': '9',
+        'col-10': '10',
+        'col-11': '11',
+        'col-12': '12',
       },
     },
     align: {
@@ -36,9 +36,9 @@ export default {
       value: 'none',
       options: {
         none: '- None -',
-        start: 'Left', // .align-self-start
-        center: 'Middle', // .align-self-center
-        end: 'Right', // .align-self-end
+        'align-self-start': 'Left',
+        'align-self-center': 'Middle',
+        'align-self-end': 'Right',
       },
     },
     offset: {
@@ -47,18 +47,18 @@ export default {
       value: 'none',
       options: {
         none: '- None -',
-        1: '1', // .offset-1
-        2: '2', // .offset-2
-        3: '3', // .offset-3
-        4: '4', // .offset-4
-        5: '5', // .offset-5
-        6: '6', // .offset-6
-        7: '7', // .offset-7
-        8: '8', // .offset-8
-        9: '9', // .offset-9
-        10: '10', // .offset-10
-        11: '11', // .offset-11
-        12: '12', // .offset-12
+        'offset-1': '1',
+        'offset-2': '2',
+        'offset-3': '3',
+        'offset-4': '4',
+        'offset-5': '5',
+        'offset-6': '6',
+        'offset-7': '7',
+        'offset-8': '8',
+        'offset-9': '9',
+        'offset-10': '10',
+        'offset-11': '11',
+        'offset-12': '12',
       },
     },
     margin: {
@@ -67,8 +67,8 @@ export default {
       value: 'none',
       options: {
         none: '- None -',
-        left: 'Left', // .ml-auto
-        right: 'Right', // .mr-auto
+        'ml-left': 'Left',
+        'mr-right': 'Right',
       },
     },
   },

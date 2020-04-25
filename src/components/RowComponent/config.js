@@ -15,9 +15,10 @@ export default {
       type: 'select',
       value: 'none',
       options: {
-        start: 'Top', // .align-items-start
-        center: 'Middle', // .align-items-center
-        end: 'Bottom', // .align-items-end
+        none: '- None -',
+        'align-items-start': 'Top',
+        'align-items-center': 'Middle',
+        'align-items-end': 'Bottom',
       },
     },
     justify: {
@@ -26,9 +27,9 @@ export default {
       value: 'none',
       options: {
         none: '- None -',
-        start: 'Left', // .justify-content-start
-        center: 'Middle', // .justify-content-center
-        end: 'Right', // .justify-content-end
+        'justify-content-start': 'Left',
+        'justify-content-center': 'Middle',
+        'justify-content-end': 'Right',
       },
     },
   },

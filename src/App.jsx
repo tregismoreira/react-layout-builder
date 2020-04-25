@@ -6,41 +6,81 @@ import './assets/scss/main.scss';
 const components = [
   {
     type: 'container',
-    config: {},
+    settings: {},
     children: [
       {
         type: 'row',
-        config: {},
+        settings: {},
         children: [
           {
             type: 'col',
-            config: {},
+            settings: {},
             children: [],
           },
           {
             type: 'col',
-            config: {},
+            settings: {},
             children: [],
           },
         ],
       },
       {
         type: 'row',
-        config: {},
+        settings: {},
         children: [
           {
             type: 'col',
-            config: {},
+            settings: {},
             children: [],
           },
           {
             type: 'col',
-            config: {},
+            settings: {
+              offset: 'offset-4',
+            },
             children: [],
           },
+        ],
+      },
+      {
+        type: 'row',
+        settings: {},
+        children: [
           {
             type: 'col',
-            config: {},
+            settings: {
+              size: 'col-4',
+            },
+            children: [],
+          },
+        ],
+      },
+      {
+        type: 'row',
+        settings: {
+          justify: 'justify-content-center',
+        },
+        children: [
+          {
+            type: 'col',
+            settings: {
+              size: 'col-4',
+            },
+            children: [],
+          },
+        ],
+      },
+      {
+        type: 'row',
+        settings: {
+          justify: 'justify-content-end',
+        },
+        children: [
+          {
+            type: 'col',
+            settings: {
+              size: 'col-4',
+            },
             children: [],
           },
         ],
@@ -59,8 +99,11 @@ const RenderComponent = (component, key) => {
   if (typeof mapComponentToKey[component.type] !== 'undefined') {
     return React.createElement(
       mapComponentToKey[component.type],
-      { key },
-      component.children.map((children, key) => RenderComponent(children, key))
+      { key, settings: component.settings },
+      component.children &&
+        component.children.map((children, key) =>
+          RenderComponent(children, key)
+        )
     );
   }
 };

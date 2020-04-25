@@ -11,13 +11,9 @@ export default {
   // Defines the available settings for the componeent.
   settings: {
     fluid: {
-      title: 'Vertical alignment',
+      title: 'Fluid container',
       type: 'checkbox',
       value: false,
-      options: {
-        false: 'False', // .container
-        true: 'True', // .container-fluid
-      },
     },
   },
 };
