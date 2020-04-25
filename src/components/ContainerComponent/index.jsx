@@ -1,39 +1,37 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BaseComponent from '../BaseComponent';
-// import config from './config';
+import config from './config';
 
-import styles from './styles.module.scss';
+import { style } from './styles.module.scss';
 
 class ContainerComponent extends BaseComponent {
-  // Build the classes according to the component settings.
-  buildSettings = (settings) => {
-    const { fluid } = settings;
+  constructor(props) {
+    super(props);
+    this.name = config.name;
+    this.style = style;
+    this.modifiers = this.buildModifiers(this.props.modifiers);
+  }
 
-    return `container${fluid ? '-fluid' : ''}`;
+  buildModifiers = (modifiers) => {
+    const { fluid } = modifiers;
+
+    return `${this.name}${fluid ? '-fluid' : ''}`;
   };
 
   render() {
-    return (
-      <div
-        className={`${this.buildSettings(this.props.settings)} ${
-          styles.container
-        }`}
-      >
-        {this.props.children}
-      </div>
-    );
+    return super.render();
   }
 }
 
 ContainerComponent.propTypes = {
-  settings: PropTypes.shape({
+  modifiers: PropTypes.shape({
     fluid: PropTypes.bool,
   }),
 };
 
 ContainerComponent.defaultProps = {
-  settings: {
+  modifiers: {
     fluid: false,
   },
 };

@@ -1,16 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BaseComponent from '../BaseComponent';
-// import config from './config';
+import config from './config';
 
-import styles from './styles.module.scss';
+import { style } from './styles.module.scss';
 
 class ColComponent extends BaseComponent {
-  // Build the classes according to the component settings.
-  buildSettings = (settings) => {
-    const classes = [];
+  constructor(props) {
+    super(props);
+    this.name = config.name;
+    this.style = style;
+    this.modifiers = this.buildModifiers(this.props.modifiers);
+  }
 
-    Object.values(settings).forEach((value) => {
+  buildModifiers = (modifiers) => {
+    const classes = [config.name];
+
+    Object.values(modifiers).forEach((value) => {
       if (value !== 'none') {
         classes.push(value);
       }
@@ -20,20 +26,12 @@ class ColComponent extends BaseComponent {
   };
 
   render() {
-    return (
-      <div
-        className={`col ${this.buildSettings(this.props.settings)} ${
-          styles.col
-        }`}
-      >
-        {this.props.children}
-      </div>
-    );
+    return super.render();
   }
 }
 
 ColComponent.propTypes = {
-  settings: PropTypes.shape({
+  modifiers: PropTypes.shape({
     size: PropTypes.string,
     align: PropTypes.string,
     offset: PropTypes.string,
@@ -42,7 +40,7 @@ ColComponent.propTypes = {
 };
 
 ColComponent.defaultProps = {
-  settings: {
+  modifiers: {
     size: 'none',
     align: 'none',
     offset: 'none',

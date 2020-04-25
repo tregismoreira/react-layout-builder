@@ -1,16 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BaseComponent from '../BaseComponent';
-// import config from './config';
+import config from './config';
 
-import styles from './styles.module.scss';
+import { style } from './styles.module.scss';
 
 class RowComponent extends BaseComponent {
-  // Build the classes according to the component settings.
-  buildSettings = (settings) => {
-    const classes = [];
+  constructor(props) {
+    super(props);
+    this.name = config.name;
+    this.style = style;
+    this.modifiers = this.buildModifiers(this.props.modifiers);
+  }
 
-    Object.values(settings).forEach((value) => {
+  buildModifiers = (modifiers) => {
+    const classes = [config.name];
+
+    Object.values(modifiers).forEach((value) => {
       if (value !== 'none') {
         classes.push(value);
       }
@@ -20,27 +26,19 @@ class RowComponent extends BaseComponent {
   };
 
   render() {
-    return (
-      <div
-        className={`row ${this.buildSettings(this.props.settings)} ${
-          styles.row
-        }`}
-      >
-        {this.props.children}
-      </div>
-    );
+    return super.render();
   }
 }
 
 RowComponent.propTypes = {
-  settings: PropTypes.shape({
+  modifiers: PropTypes.shape({
     align: PropTypes.string,
     justify: PropTypes.string,
   }),
 };
 
 RowComponent.defaultProps = {
-  settings: {
+  modifiers: {
     align: 'none',
     justify: 'none',
   },

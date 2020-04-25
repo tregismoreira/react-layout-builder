@@ -29,7 +29,7 @@ const renderComponent = (component, key) => {
       // Element type.
       mapComponentToKey[component.type],
       // Pass props.
-      { key, settings: component.settings },
+      { key, modifiers: component.modifiers },
       // If there are children, loop through them resursively.
       component.children &&
         component.children.map((children, key) =>
