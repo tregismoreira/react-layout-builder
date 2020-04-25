@@ -1,12 +1,12 @@
 import React from 'react';
-import { BaseComponent } from '../';
+import BaseComponent from '../BaseComponent';
 import config from './config';
 
 import './styles.scss';
 
 class ColComponent extends BaseComponent {
   render() {
-    return <div class="col">{this.props.children}</div>;
+    return <div className="col">{this.props.children}</div>;
   }
 }
 

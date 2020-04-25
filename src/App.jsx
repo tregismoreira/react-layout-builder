@@ -1,25 +1,22 @@
 import React from 'react';
-import { ContainerComponent, RowComponent, ColComponent } from './components';
+import { Wrapper } from './components';
 
 import './assets/scss/main.scss';
 
 function App() {
   return (
     <main>
-      <ContainerComponent>
-        <RowComponent>
-          <ColComponent>Col</ColComponent>
-          <ColComponent>Col</ColComponent>
-        </RowComponent>
-        <RowComponent>
-          <ColComponent>Col</ColComponent>
-        </RowComponent>
-        <RowComponent>
-          <ColComponent>Col</ColComponent>
-          <ColComponent>Col</ColComponent>
-          <ColComponent>Col</ColComponent>
-        </RowComponent>
-      </ContainerComponent>
+      <Wrapper type="container">
+        <Wrapper type="row">
+          <Wrapper type="col"></Wrapper>
+          <Wrapper type="col"></Wrapper>
+        </Wrapper>
+        <Wrapper type="row">
+          <Wrapper type="col"></Wrapper>
+          <Wrapper type="col"></Wrapper>
+          <Wrapper type="col"></Wrapper>
+        </Wrapper>
+      </Wrapper>
     </main>
   );
 }

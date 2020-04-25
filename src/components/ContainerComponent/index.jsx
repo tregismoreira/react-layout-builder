@@ -1,12 +1,12 @@
 import React from 'react';
-import { BaseComponent } from '../';
+import BaseComponent from '../BaseComponent';
 import config from './config';
 
 import './styles.scss';
 
 class ContainerComponent extends BaseComponent {
   render() {
-    return <div class="container">{this.props.children}</div>;
+    return <div className="container">{this.props.children}</div>;
   }
 }
 
