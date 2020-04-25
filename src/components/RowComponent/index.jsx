@@ -29,7 +29,7 @@ class RowComponent extends BaseComponent {
   };
 
   render() {
-    return <div>This is a component type RowComponent.</div>;
+    return <div class="row">{this.props.children}</div>;
   }
 }
 

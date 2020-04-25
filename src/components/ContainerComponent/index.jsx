@@ -17,7 +17,7 @@ class ContainerComponent extends BaseComponent {
   };
 
   render() {
-    return <div>This is a component type ContainerComponent.</div>;
+    return <div class="container">{this.props.children}</div>;
   }
 }
 

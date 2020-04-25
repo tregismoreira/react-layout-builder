@@ -5,11 +5,22 @@ import './assets/scss/main.scss';
 
 function App() {
   return (
-    <div className="App">
-      <ContainerComponent />
-      <RowComponent />
-      <ColComponent />
-    </div>
+    <main>
+      <ContainerComponent>
+        <RowComponent>
+          <ColComponent>Col</ColComponent>
+          <ColComponent>Col</ColComponent>
+        </RowComponent>
+        <RowComponent>
+          <ColComponent>Col</ColComponent>
+        </RowComponent>
+        <RowComponent>
+          <ColComponent>Col</ColComponent>
+          <ColComponent>Col</ColComponent>
+          <ColComponent>Col</ColComponent>
+        </RowComponent>
+      </ContainerComponent>
+    </main>
   );
 }
 

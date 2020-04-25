@@ -69,7 +69,7 @@ class ColComponent extends BaseComponent {
   };
 
   render() {
-    return <div>This is a component type ColComponent.</div>;
+    return <div class="col">{this.props.children}</div>;
   }
 }
 
