@@ -1,0 +1,85 @@
+[
+  {
+    "type": "container",
+    "settings": {},
+    "children": [
+      {
+        "type": "row",
+        "settings": {},
+        "children": [
+          {
+            "type": "col",
+            "settings": {},
+            "children": []
+          },
+          {
+            "type": "col",
+            "settings": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "row",
+        "settings": {},
+        "children": [
+          {
+            "type": "col",
+            "settings": {},
+            "children": []
+          },
+          {
+            "type": "col",
+            "settings": {
+              "offset": "offset-4"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "row",
+        "settings": {},
+        "children": [
+          {
+            "type": "col",
+            "settings": {
+              "size": "col-4"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "row",
+        "settings": {
+          "justify": "justify-content-center"
+        },
+        "children": [
+          {
+            "type": "col",
+            "settings": {
+              "size": "col-4"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "row",
+        "settings": {
+          "justify": "justify-content-end"
+        },
+        "children": [
+          {
+            "type": "col",
+            "settings": {
+              "size": "col-4"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+]
