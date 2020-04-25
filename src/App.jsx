@@ -55,19 +55,21 @@ const mapComponentToKey = {
   col: ColComponent,
 };
 
-const RenderComponent = (component) => {
+const RenderComponent = (component, key) => {
   if (typeof mapComponentToKey[component.type] !== 'undefined') {
     return React.createElement(
       mapComponentToKey[component.type],
-      {},
-      component.children.map((children) => RenderComponent(children))
+      { key },
+      component.children.map((children, key) => RenderComponent(children, key))
     );
   }
 };
 
 function App() {
   return (
-    <main>{components.map((component) => RenderComponent(component))}</main>
+    <main>
+      {components.map((component, key) => RenderComponent(component, key))}
+    </main>
   );
 }
 
