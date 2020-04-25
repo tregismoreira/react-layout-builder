@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import BaseComponent from '../BaseComponent';
-import config from './config';
+// import config from './config';
 
 import styles from './styles.module.scss';
 
