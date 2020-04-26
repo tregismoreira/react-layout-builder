@@ -27,10 +27,12 @@ export class BaseComponent extends Component {
     return (
       <div className={`${this.modifiers} ${this.style} ${styles.wrapper}`}>
         {this.props.children}
-        <Actions
-          config={this.config}
-          executeAction={this.handleAddChildComponent}
-        />
+        {this.config.allowedChilds.length > 0 && (
+          <Actions
+            config={this.config}
+            executeAction={this.handleAddChildComponent}
+          />
+        )}
       </div>
     );
   }
