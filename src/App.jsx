@@ -6,7 +6,7 @@ import {
   ColComponent,
   ParagraphComponent,
 } from './components';
-import { buildTree } from './utils';
+import { buildTree } from './utils/methods';
 
 import './assets/scss/main.scss';
 
