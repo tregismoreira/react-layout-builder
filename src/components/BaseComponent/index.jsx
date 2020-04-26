@@ -15,7 +15,9 @@ export class BaseComponent extends Component {
     this.modifiers = null;
   }
 
-  handleAddChildComponent = (props) => {
+  handleAddChildComponent = (e, props) => {
+    e.preventDefault();
+
     let type;
 
     switch (props.type) {
@@ -49,7 +51,7 @@ export class BaseComponent extends Component {
         <div className={styles['actions']}>
           <a
             href="#"
-            onClick={() => this.handleAddChildComponent(this.props)}
+            onClick={(e) => this.handleAddChildComponent(e, this.props)}
             className={styles['actions--add']}
           >
             <FontAwesomeIcon icon={faPlus} />
