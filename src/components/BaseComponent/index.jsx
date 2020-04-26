@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect as reduxConnect } from 'react-redux';
 import { addComponent } from '../../store/actions';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import Actions from './Actions';
 
 import styles from './styles.module.scss';
 
@@ -15,31 +14,11 @@ export class BaseComponent extends Component {
     this.modifiers = null;
   }
 
-  handleAddChildComponent = (e, props) => {
-    e.preventDefault();
-
-    let type;
-
-    switch (props.type) {
-      case 'container':
-        type = 'row';
-        break;
-      case 'row':
-        type = 'col';
-        break;
-      case 'col':
-        type = 'row';
-        break;
-      default:
-        type = null;
-    }
-
-    if (type) {
-      this.props.dispatch.addComponent({
-        type,
-        parent: props.id,
-      });
-    }
+  handleAddChildComponent = (type) => {
+    this.props.dispatch.addComponent({
+      type,
+      parent: this.props.id,
+    });
   };
 
   handleOpenModifiers = () => {};
@@ -48,15 +27,10 @@ export class BaseComponent extends Component {
     return (
       <div className={`${this.modifiers} ${this.style} ${styles.wrapper}`}>
         {this.props.children}
-        <div className={styles['actions']}>
-          <a
-            href="#"
-            onClick={(e) => this.handleAddChildComponent(e, this.props)}
-            className={styles['actions--add']}
-          >
-            <FontAwesomeIcon icon={faPlus} />
-          </a>
-        </div>
+        <Actions
+          config={this.config}
+          executeAction={this.handleAddChildComponent}
+        />
       </div>
     );
   }

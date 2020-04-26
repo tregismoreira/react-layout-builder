@@ -14,7 +14,7 @@ class ColComponent extends BaseComponent {
   }
 
   buildModifiers = (modifiers) => {
-    const classes = [config.name];
+    const classes = [config.type];
 
     Object.values(modifiers).forEach((value) => {
       if (value !== 'none') {

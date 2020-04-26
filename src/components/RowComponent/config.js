@@ -1,6 +1,6 @@
 export default {
-  // Component machine name.
-  name: 'row',
+  // Component type machine name.
+  type: 'row',
 
   // Component label.
   label: 'Row',
@@ -8,8 +8,8 @@ export default {
   // Defines which component types are allowed to be added as child.
   allowedChilds: ['col'],
 
-  // Defines the available parameters for the componeent.
-  params: {
+  // Defines the available modifiers for the componeent.
+  availableModifiers: {
     align: {
       title: 'Vertical alignment',
       type: 'select',

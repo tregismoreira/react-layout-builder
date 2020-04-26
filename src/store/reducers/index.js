@@ -9,8 +9,6 @@ export default (state = initialState, action) => {
         ...action.payload,
       };
 
-      console.log('new component', payload);
-
       return [...state, payload];
     default:
       return state;

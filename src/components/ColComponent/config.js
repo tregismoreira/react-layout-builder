@@ -1,6 +1,6 @@
 export default {
-  // Component machine name.
-  name: 'col',
+  // Component type machine name.
+  type: 'col',
 
   // Component label.
   label: 'Column',
@@ -9,7 +9,7 @@ export default {
   allowedChilds: ['row'],
 
   // Defines the available modifiers for the componeent.
-  modifiers: {
+  availableModifiers: {
     size: {
       title: 'Size',
       type: 'select',

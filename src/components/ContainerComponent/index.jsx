@@ -16,7 +16,7 @@ class ContainerComponent extends BaseComponent {
   buildModifiers = (modifiers) => {
     const { fluid } = modifiers;
 
-    return `${config.name}${fluid ? '-fluid' : ''}`;
+    return `${config.type}${fluid ? '-fluid' : ''}`;
   };
 
   render() {

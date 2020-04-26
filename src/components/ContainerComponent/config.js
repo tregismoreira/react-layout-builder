@@ -1,6 +1,6 @@
 export default {
-  // Component machine name.
-  name: 'container',
+  // Component type machine name.
+  type: 'container',
 
   // Component label.
   label: 'Container',
@@ -9,7 +9,7 @@ export default {
   allowedChilds: ['row'],
 
   // Defines the available modifiers for the componeent.
-  modifiers: {
+  availableModifiers: {
     fluid: {
       title: 'Fluid container',
       type: 'checkbox',

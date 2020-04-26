@@ -2,23 +2,3 @@
   position: relative;
 }
 
-.actions {
-  width: 100%;
-  text-align: center;
-  margin-bottom: -0.5rem;
-  margin-top: 1rem;
-}
-
-.actions--add {
-  padding: 0.2rem 0.3rem;
-  box-sizing: content-box;
-  background: #fff;
-  border-radius: 2px;
-  border: 1px solid #ccc;
-  color: #ccc;
-
-  &:hover {
-    color: #999;
-    border-color: #999;
-  }
-}

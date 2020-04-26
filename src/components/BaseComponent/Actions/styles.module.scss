@@ -1,0 +1,38 @@
+.actions {
+  width: 100%;
+  text-align: center;
+  margin-bottom: -0.5rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.actions-button {
+  padding: 0.2rem;
+  box-sizing: content-box;
+  background: #fff;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  color: #ccc;
+  font-size: 10px;
+  width: 15px;
+  height: 15px;
+
+  &:hover {
+    color: #999;
+    border-color: #999;
+  }
+}
+
+.popover {
+  text-align: center;
+  & > div {
+    min-width: 200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+  & > svg {
+    fill: #fff;
+  }
+}
