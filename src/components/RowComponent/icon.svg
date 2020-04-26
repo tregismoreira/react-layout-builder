@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="448" viewBox="0 0 512 448">
+  <path id="columns-solid" d="M432,0H80A48,48,0,0,0,32,48V464a48,48,0,0,0,48,48H432a48,48,0,0,0,48-48V48A48,48,0,0,0,432,0ZM214,448H92V64H214Zm206,0H298V64H420Z" transform="translate(0 480) rotate(-90)"/>
+</svg>

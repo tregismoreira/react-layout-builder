@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Popover from 'react-popover';
+import { ReactSVG } from 'react-svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { availableComponents } from '../../../utils/constants';
 
 import styles from './styles.module.scss';
 
@@ -21,8 +23,17 @@ class Actions extends Component {
 
   buildOptions = () => {
     return this.props.config.allowedChilds.map((type, key) => (
-      <button onClick={() => this.handleExecuteAction(type)} key={key}>
-        {type}
+      <button
+        className={styles['popover-button']}
+        onClick={() => this.handleExecuteAction(type)}
+        key={key}
+      >
+        <ReactSVG
+          src={availableComponents[type].icon}
+          className={styles['popover-button-icon']}
+        />
+
+        {availableComponents[type].label}
       </button>
     ));
   };

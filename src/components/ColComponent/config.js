@@ -1,9 +1,14 @@
+import icon from './icon.svg';
+
 export default {
   // Component type machine name.
   type: 'col',
 
   // Component label.
   label: 'Column',
+
+  // component icon
+  icon,
 
   // Defines which component types are allowed to be added as child.
   allowedChilds: ['row'],
