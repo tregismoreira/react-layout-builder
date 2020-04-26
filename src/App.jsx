@@ -1,6 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ContainerComponent, RowComponent, ColComponent } from './components';
+import {
+  ContainerComponent,
+  RowComponent,
+  ColComponent,
+  ParagraphComponent,
+} from './components';
 import { buildTree } from './utils';
 
 import './assets/scss/main.scss';
@@ -19,6 +24,7 @@ const mapComponentToKey = {
   container: ContainerComponent,
   row: RowComponent,
   col: ColComponent,
+  paragraph: ParagraphComponent,
 };
 
 const renderComponent = (component, key) => {

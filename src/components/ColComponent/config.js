@@ -11,7 +11,7 @@ export default {
   icon,
 
   // Defines which component types are allowed to be added as child.
-  allowedChilds: ['row'],
+  allowedChilds: ['row', 'paragraph'],
 
   // Defines the available modifiers for the componeent.
   availableModifiers: {
