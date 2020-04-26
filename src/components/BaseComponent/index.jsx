@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { connect as reduxConnect } from 'react-redux';
+import { addComponent } from '../../store/actions';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCog, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 import styles from './styles.module.scss';
 
-class BaseComponent extends Component {
+export class BaseComponent extends Component {
   constructor(props) {
     super(props);
 
@@ -13,28 +15,65 @@ class BaseComponent extends Component {
     this.modifiers = null;
   }
 
-  handleAddChildComponent = () => {};
+  handleAddChildComponent = (props) => {
+    let type;
+
+    switch (props.type) {
+      case 'container':
+        type = 'row';
+        break;
+      case 'row':
+        type = 'col';
+        break;
+      case 'col':
+        type = 'row';
+        break;
+      default:
+        type = null;
+    }
+
+    if (type) {
+      this.props.dispatch.addComponent({
+        type,
+        parent: props.id,
+      });
+    }
+  };
+
   handleOpenModifiers = () => {};
 
   render() {
     return (
       <div className={`${this.modifiers} ${this.style} ${styles.wrapper}`}>
-        <ul className={styles.controls}>
-          <li>
-            <a href="#" className={styles['controls-link']}>
-              <FontAwesomeIcon icon={faPlus} />
-            </a>
-          </li>
-          <li>
-            <a href="#" className={styles['controls-link']}>
-              <FontAwesomeIcon icon={faCog} />
-            </a>
-          </li>
-        </ul>
         {this.props.children}
+        <div className={styles['actions']}>
+          <a
+            href="#"
+            onClick={() => this.handleAddChildComponent(this.props)}
+            className={styles['actions--add']}
+          >
+            <FontAwesomeIcon icon={faPlus} />
+          </a>
+        </div>
       </div>
     );
   }
 }
 
-export default BaseComponent;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    dispatch: { addComponent: (payload) => dispatch(addComponent(payload)) },
+  };
+};
+
+const mapStateToProps = (state) => {
+  return {
+    state,
+  };
+};
+
+export const connect = (Component) => {
+  return reduxConnect(mapStateToProps, mapDispatchToProps)(Component);
+};
+
+export default connect(BaseComponent);
