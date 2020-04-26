@@ -8,7 +8,7 @@ import { style } from './styles.module.scss';
 class ColComponent extends BaseComponent {
   constructor(props) {
     super(props);
-    this.name = config.name;
+    this.config = config;
     this.style = style;
     this.modifiers = this.buildModifiers(this.props.modifiers);
   }

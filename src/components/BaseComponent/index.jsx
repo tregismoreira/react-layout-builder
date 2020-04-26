@@ -8,14 +8,9 @@ class BaseComponent extends Component {
   constructor(props) {
     super(props);
 
-    // Set the machine name.
-    this.name = '';
-
-    // Set custom styles.
-    this.style = '';
-
-    // Set the class modifiers.
-    this.modifiers = '';
+    this.config = null;
+    this.style = null;
+    this.modifiers = null;
   }
 
   handleAddChildComponent = () => {};

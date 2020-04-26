@@ -8,7 +8,7 @@ import { style } from './styles.module.scss';
 class ContainerComponent extends BaseComponent {
   constructor(props) {
     super(props);
-    this.name = config.name;
+    this.config = config;
     this.style = style;
     this.modifiers = this.buildModifiers(this.props.modifiers);
   }
@@ -16,7 +16,7 @@ class ContainerComponent extends BaseComponent {
   buildModifiers = (modifiers) => {
     const { fluid } = modifiers;
 
-    return `${this.name}${fluid ? '-fluid' : ''}`;
+    return `${config.name}${fluid ? '-fluid' : ''}`;
   };
 
   render() {
