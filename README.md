@@ -2,9 +2,7 @@
 
 This is an experimental implementation of a layout builder for [Bootstrap](https://getbootstrap.com), built with [React](https://reactjs.org) and [Redux](https://redux.js.org).
 
-![Demo](/src/assets/demo.gif)
-
-TODO:
+@TODO:
 
 - Add controls to remove component and edit modifiers (css classes);
 - Allow users to export the generated HTML;
@@ -14,6 +12,10 @@ TODO:
 - Refactor 🤓
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## [DEMO](https://react-layout-builder.web.app/)
+
+![Demo](/src/assets/demo.gif)
 
 ## Getting Started
 
