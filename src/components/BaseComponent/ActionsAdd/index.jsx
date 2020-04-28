@@ -9,7 +9,7 @@ import { availableComponents } from '../../../utils/constants';
 
 import styles from './styles.module.scss';
 
-class Actions extends Component {
+class ActionsAdd extends Component {
   state = {
     open: false,
   };
@@ -78,4 +78,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Actions);
+export default connect(mapStateToProps, mapDispatchToProps)(ActionsAdd);

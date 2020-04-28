@@ -1,4 +1,4 @@
-import { ADD_COMPONENT } from '../constants';
+import { ADD_COMPONENT, REMOVE_COMPONENT } from '../constants';
 import initialState from '../../assets/data.json';
 
 export default (state = initialState, action) => {
@@ -10,6 +10,10 @@ export default (state = initialState, action) => {
       };
 
       return [...state, payload];
+
+    case REMOVE_COMPONENT:
+      return state.filter((item) => item.id !== action.payload.id);
+
     default:
       return state;
   }

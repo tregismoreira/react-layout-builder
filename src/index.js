@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import { addComponent } from './store/actions';
+import { addComponent, removeComponent } from './store/actions';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 window.store = store;
 window.addComponent = addComponent;
+window.removeComponent = removeComponent;
 
 ReactDOM.render(
   <Provider store={store}>
