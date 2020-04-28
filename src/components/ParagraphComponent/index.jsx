@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaseComponent } from '../BaseComponent';
+import { BaseComponent } from '../';
 import config from './config';
 
 class ParagraphComponent extends BaseComponent {

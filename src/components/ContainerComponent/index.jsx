@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect, BaseComponent } from '../BaseComponent';
+import { BaseComponent } from '../';
 import config from './config';
 
 import { style } from './styles.module.scss';
@@ -36,4 +36,4 @@ ContainerComponent.defaultProps = {
   },
 };
 
-export default connect(ContainerComponent);
+export default ContainerComponent;

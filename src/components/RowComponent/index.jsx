@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { connect, BaseComponent } from '../BaseComponent';
+import { BaseComponent } from '../';
 import config from './config';
 
 import { style } from './styles.module.scss';
@@ -44,4 +44,4 @@ RowComponent.defaultProps = {
   },
 };
 
-export default connect(RowComponent);
+export default RowComponent;

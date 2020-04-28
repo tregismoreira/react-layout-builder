@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addComponent } from '../../../store/actions';
 import Popover from 'react-popover';
 import { ReactSVG } from 'react-svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,7 +19,11 @@ class Actions extends Component {
   };
 
   handleExecuteAction = (type) => {
-    this.props.executeAction(type);
+    this.props.dispatch.addComponent({
+      type,
+      parent: this.props.component.id,
+    });
+
     this.handleTogglePopover();
   };
 
@@ -60,4 +66,16 @@ class Actions extends Component {
   }
 }
 
-export default Actions;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    dispatch: { addComponent: (payload) => dispatch(addComponent(payload)) },
+  };
+};
+
+const mapStateToProps = (state) => {
+  return {
+    state,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Actions);
