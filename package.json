@@ -20,6 +20,7 @@
     "react-scripts": "3.4.1",
     "react-svg": "^11.0.20",
     "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.9",
     "yarn": "^1.22.4"
   },
   "scripts": {
